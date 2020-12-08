@@ -1,0 +1,338 @@
+* {
+  font-family: 'Questrial', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #000000f3 !important        */
+}
+/* SOMBRE : background-color: #e4e4e4c2 !important */
+
+.app-title-container{
+  margin-top: 50px; display: flex; justify-content: center;
+}
+ #darkTheme-app-title{
+   color: #213d85 !important;
+ }
+
+.app-title {
+  margin:0; 
+  color: rgba(104, 207, 255, 0.885); 
+  font-size: 60px;
+}
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+}
+.addNoteContainer{
+  max-width: 1000px;
+}
+#new-title {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid rgba(104, 207, 255, 0.885);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 10px 0px;
+}
+#new-title:focus{
+  box-shadow: none;
+}
+#new-note {
+  width: 100%;
+  resize: none;
+  height: 200px;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid rgba(104, 207, 255, 0.885);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  margin: 10px;
+}
+#new-note:focus{
+  box-shadow: none;
+}
+.addIcon {
+  fill: rgba(104, 207, 255, 0.885);
+  color: black;
+}
+#addButton {
+  /* width: fit-content; */
+  background-color: rgba(28, 28, 28, 0.933);
+  border: 2px solid rgba(104, 207, 255, 0.885);
+  border-radius: 5px;
+  color: rgba(28, 28, 28, 0.933);
+  margin: 10px;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  /* border: none !important; */
+}
+#addButton:focus, #addButton:active {
+  /* border: none !important; */
+  box-shadow: none;
+}
+.table {
+  width: 300px;
+}
+
+.table th {
+  text-align: start;
+  width: 145px;
+}
+.table td{
+  width: 145px;
+}
+
+.maNoteContainer {
+  display: grid;
+  position: relative;
+  margin: 2vw;
+  grid-template-columns: repeat(5, 18vw);
+  /* width: 100%; */
+  justify-content: center;
+  align-items: center;
+}
+
+.maNote {
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #ffffff20;
+  color: white;
+  word-break: break-all;
+  hyphens: auto;
+  position: relative;
+  padding-top: 30px;
+  border: 3px solid rgba(104, 207, 255, 0.885);
+}
+
+.noteTitle{
+  cursor: pointer;
+  margin: 0;
+  font-size: 25px;
+  padding: 5px 15px 5px 15px;
+}
+.noteContent {
+  cursor: pointer;
+  padding-left: 15px;
+  font-size: 20px
+}
+/* .buttons-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+} */
+.deleteButton {
+  background-color: rgba(104, 207, 255, 0.885);
+  border: none;
+  color: ffffff20;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+  /* margin-left: 10px;
+  position: relative; */
+  position: absolute;
+  bottom:20px;
+  left:20px;
+}
+.deleteButton:hover, .deleteButton:active{
+  background-color: rgba(104, 207, 255, 0.885) !important;
+}
+
+.deleteButton.darkTheme-button-form:hover {
+  background-color: #213d85 !important;
+}
+
+#edit-note {
+  background-color: rgba(104, 207, 255, 0.885);
+  border: none;
+  color: #ffffff2c;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+    /* margin-left: 10px;
+  position: relative; */
+  position: absolute;
+  bottom:20px;
+  left:70px;;
+}
+
+.date {
+  opacity: 0.6;
+  font-size: 15px;
+  text-align: center;
+}
+.hour {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1400px) {
+  .maNoteContainer{
+    grid-template-columns: repeat(4, 23vw);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .maNoteContainer{
+    grid-template-columns: repeat(3, 31vw);
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .maNoteContainer{
+    grid-template-columns: repeat(2, 48vw);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .maNoteContainer {
+    grid-template-columns: repeat(2, 50vw);
+  }
+}
+
+.closeModalButton {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  top:20px;
+  right:20px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.closeModalButton:hover {
+ background-color: rgba(104, 152, 255, 0.885) 
+}
+
+.modalTitle {
+  font-size: 32px;
+}
+
+.modalContent {
+  font-size: 25px;
+}
+
+#title-modal-input {
+  border: none !important;
+  background-color: transparent !important;
+  color: white;
+  font-size: 32px;
+  width: 100%;
+}
+#darkTheme #title-modal-input, #darkTheme #note-modal-input {
+  color: #213d85 !important;
+  box-shadow: none;
+}
+#title-modal-input:focus {
+  color: white !important;
+  box-shadow: none;
+}
+
+#note-modal-input {
+  margin-top: 10px !important;
+  border: none !important;
+  background-color: transparent !important;
+  color: white;
+  font-size: 32px;
+  resize: none;
+}
+
+#note-modal-input:focus {
+  color: white !important;
+  box-shadow: none;
+}
+
+.dayNightMode {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.icon__icon.day {
+fill: rgba(104, 207, 255, 0.885);
+border: 3px solid rgba(104, 207, 255, 0.885);
+padding: 5px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+.icon__icon.night {
+  fill: rgba(104, 207, 255, 0.885);
+  border: 3px solid rgba(104, 207, 255, 0.885);
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+#darkTheme #new-title, #darkTheme #new-note {
+  color: #213d85;
+  border: 2px solid #213d85
+}
+
+#darkTheme *:focus {
+  color: #213d85 !important;
+  border: 2px solid #213d85
+}
+
+#darkTheme-noteBody * {
+  color: #213d85 !important;
+}
+#darkTheme-noteBody {
+  border: 3px solid #213d85;
+}
+
+#darkTheme-app-icons {
+  fill: #213d85;
+  border: 3px solid #213d85;
+}
+
+.darkTheme-button-form {
+  background-color: #213d85 !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+.darkTheme-button-form svg {
+  fill: white;
+}
+.display-none {
+  display: none;
+}
